@@ -179,6 +179,7 @@ https://github.com/Koongpao/young-wow-test-frontend
 
 - Node.js (v14 or later)
 - PostgreSQL
+- https://www.postgresql.org/download/
 
 1. Clone the repository:
 ```bash
@@ -192,6 +193,7 @@ npm install
 ```
 
 3. Set up environment variables: Create .env file in root directory
+
 ```env
 PORT=3001
 
@@ -204,6 +206,11 @@ DB_PASSWORD=YOUR_POSTGRES_USER_PASWORD
 DB_PORT="5432"
 ```
 
+This assumes your postgres user is allowed to create a new database, otherwise you will need admin user and password
+```env
+DB_ADMIN_USER=YOUR_POSTGRES_ADMIN_USER
+DB_ADMIN_PASSWORD=YOUR_POSTGRES_ADMIN_PASSWORD
+```
 4. Initialize Database by creating tables
 ```bash
 npm run initdb
@@ -220,5 +227,5 @@ npm start
 ```
 
 7. Run in conjunction with frontend app
-Please refer to https://github.com/Koongpao/young-wow-test-frontend
+- Please refer to https://github.com/Koongpao/young-wow-test-frontend
 

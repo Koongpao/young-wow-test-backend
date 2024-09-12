@@ -1,6 +1,32 @@
 const pool = require("../db");
+const { Pool } = require("pg");
 
-const initializeDatabase = async () => {
+const adminPool = new Pool({
+  user: process.env.DB_ADMIN_USER || process.env.DB_USER,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  password: process.env.DB_ADMIN_PASSWORD || process.env.DB_PASSWORD,
+});
+
+const databaseName = process.env.DB_DATABASE;
+
+const createDatabase = async () => {
+  const adminClient = await adminPool.connect();
+  try {
+    await adminClient.query(`CREATE DATABASE ${databaseName};`);
+    console.log(`Database ${databaseName} created successfully.`);
+  } catch (err) {
+    if (err.code === '42P04') {
+      console.log(`Database ${databaseName} already exists.`);
+    } else {
+      console.error(`Error creating database ${databaseName}:`, err);
+    }
+  } finally {
+    adminClient.release();
+  }
+};
+
+const initializeTables = async () => {
   let client;
 
   try {
@@ -39,4 +65,16 @@ const initializeDatabase = async () => {
   }
 };
 
-initializeDatabase().catch((err) => console.error("Error in initialization:", err).finally(() => pool.end()));
+const main = async () => {
+  try {
+    await createDatabase();
+    await initializeTables();
+  } catch (err) {
+    console.error("Error in initialization:", err);
+  } finally {
+    pool.end();
+    adminPool.end();
+  }
+};
+
+main();

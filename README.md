@@ -182,7 +182,7 @@ https://github.com/Koongpao/young-wow-test-frontend
 1. Clone the repository:
 ```bash
 git clone https://github.com/Koongpao/young-wow-test-backend.git
-cd .\young-wow-backend\
+cd .\young-wow-test-backend\
 ```
 
 2. Install dependencies:

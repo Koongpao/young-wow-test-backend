@@ -7,8 +7,6 @@ https://github.com/Koongpao/young-wow-test-frontend
 
 ## Features
 
-## Features
-
 - ** User Registration and Authentication **
 
   - Register with unique username, email, password

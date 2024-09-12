@@ -28,152 +28,150 @@ https://github.com/Koongpao/young-wow-test-frontend
 ### User Endpoints
 
 - ** GET /users **
-- Get all current users
-- Response
-```json
-[
-  {
-    "id": "int",
-    "username": "string",
-    "email": "string"
-  }
-]
-```
+    - Get all current users
+    - Response
+    ```json
+    [
+    {
+        "id": "int",
+        "username": "string",
+        "email": "string"
+    }
+    ]
+    ```
 
 - ** GET /users/:id **
-- Get user by id
-- Response
-```json
-[
-  {
-    "id": "int",
-    "username": "string",
-    "email": "string"
-  }
-]
-```
+    - Get user by id
+    - Response
+    ```json
+    [
+    {
+        "id": "int",
+        "username": "string",
+        "email": "string"
+    }
+    ]
+    ```
 
 - ** POST /users **
-- Register a user
-- Request
-```json
-{
-    "username": "string",
-    "email": "string",
-    "password": "string"
-}
-```
+    - Register a user
+    - Request
+    ```json
+    {
+        "username": "string",
+        "email": "string",
+        "password": "string"
+    }
+    ```
 
 ### Auth Endpoints
 
 - ** POST /login **
-- Login a user with email and password credentials
-- Request
-```json
-{
-    "email": "string",
-    "password": "string"
-}
-
-- Response
-```json
-{
-    "message": "string",
-    "data": {
-        "token": "string"
+    - Login a user with email and password credentials
+    - Request
+    ```json
+    {
+        "email": "string",
+        "password": "string"
     }
-}
-```
+    ```
+    - Response
+    ```json
+    {
+        "message": "string",
+        "data": {
+            "token": "string"
+        }
+    }
+    ```
 
 ### Post Endpoints
 
 - ** GET /posts **
-- Get all exising posts
-- Response
-```json
-[
-    {
-        "id": "int",
-        "title": "string",
-        "user_id": "int",
-        "content": "string",
-        "created_at": "string",
-        "username": "string"
-    }
-]
-
-
+    - Get all exising posts
+    - Response
+    ```json
+    [
+        {
+            "id": "int",
+            "title": "string",
+            "user_id": "int",
+            "content": "string",
+            "created_at": "string",
+            "username": "string"
+        }
+    ]
 
 - ** GET /posts/:id **
-- Get post by id
-- Response
-```json
-{
+    - Get post by id
+    - Response
+    ```json
     {
-        "id": "int",
-        "title": "string",
-        "user_id": "int",
-        "content": "string",
-        "created_at": "string",
-        "username": "string"
+        {
+            "id": "int",
+            "title": "string",
+            "user_id": "int",
+            "content": "string",
+            "created_at": "string",
+            "username": "string"
+        }
     }
-}
-```
+    ```
 
 - ** POST /posts **
-- Post a new post
-- Require authentication (token)
-- Request
-- Headers - Authorization: token
-```json
-{
-    "title": "string",
-    "content": "string"
-}
-```
-- Response
-```json
-{
-    "message": "string",
-    "data": {
-        "id": "int",
+    - Post a new post
+    - Require authentication (token)
+    - Request
+    - Headers - Authorization: token
+    ```json
+    {
         "title": "string",
-        "user_id": "int",
-        "content": "string",
-        "created_at": "string"
+        "content": "string"
     }
-}
-```
+    ```
+    - Response
+    ```json
+    {
+        "message": "string",
+        "data": {
+            "id": "int",
+            "title": "string",
+            "user_id": "int",
+            "content": "string",
+            "created_at": "string"
+        }
+    }
+    ```
 
 - ** PUT /posts/:id **
-- Update an existing post
-- Require authentication (token)
-- Request
-- Headers - Authorization: token
-```json
-{
-    "title": "string",
-    "content": "string"
-}
-```
-- Response
-```json
-{
-    "message": "string",
-    "data": {
-        "id": "int",
+    - Update an existing post
+    - Require authentication (token)
+    - Request
+    - Headers - Authorization: token
+    ```json
+    {
         "title": "string",
-        "user_id": "int",
-        "content": "string",
-        "created_at": "string"
+        "content": "string"
     }
-}
-```
+    ```
+    - Response
+    ```json
+    {
+        "message": "string",
+        "data": {
+            "id": "int",
+            "title": "string",
+            "user_id": "int",
+            "content": "string",
+            "created_at": "string"
+        }
+    }
+    ```
 
 - ** DELETE /posts/:id **
-- Delete an existing post
-- Require authentication (token)
-- Headers - Authorization: token
+    - Delete an existing post
+    - Require authentication (token)
+    - Headers - Authorization: token
 
 ## Setup and Installation
 

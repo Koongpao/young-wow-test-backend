@@ -30,11 +30,11 @@ https://github.com/Koongpao/young-wow-test-frontend
     - Response
     ```json
     [
-    {
-        "id": "int",
-        "username": "string",
-        "email": "string"
-    }
+        {
+            "id": "int",
+            "username": "string",
+            "email": "string"
+        }
     ]
     ```
 
@@ -43,11 +43,11 @@ https://github.com/Koongpao/young-wow-test-frontend
     - Response
     ```json
     [
-    {
-        "id": "int",
-        "username": "string",
-        "email": "string"
-    }
+        {
+            "id": "int",
+            "username": "string",
+            "email": "string"
+        }
     ]
     ```
 

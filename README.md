@@ -197,9 +197,9 @@ PORT=3001
 
 SECRET_KEY = YOUR_SECRET_KEY
 
-DB_USER=YOUR_POSTGRES_USER (on default it's postgres)
-DB_HOST=YOUR_HOST_NAME (on default it's localhost)
-DB_DATABASE=young_wow_test_database
+DB_USER=YOUR_POSTGRES_USER (on default, postgres)
+DB_HOST=YOUR_HOST_NAME (on default, localhost)
+DB_DATABASE="young_wow_test_database"
 DB_PASSWORD=YOUR_POSTGRES_USER_PASSWORD
 DB_PORT="5432"
 ```

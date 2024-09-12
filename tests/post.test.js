@@ -41,7 +41,6 @@ describe("Posts API routes", () => {
     it("should get all posts", async () => {
       const response = await request(app).get("/posts");
       expect(response.statusCode).toBe(200);
-      console.log(response.body);
       expect(Array.isArray(response.body)).toBe(true);
     });
 

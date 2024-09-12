@@ -193,7 +193,7 @@ npm install
 3. Set up environment variables: Create .env file in root directory
 
 ```env
-PORT=3001
+PORT="3001"
 
 SECRET_KEY = YOUR_SECRET_KEY
 
